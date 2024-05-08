@@ -30,7 +30,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: 'your-ssh-user'
+          username: 'ubuntu'
           key: ${{ secrets.SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_IMAGE_NAME }}:latest
