@@ -3,7 +3,7 @@
 all: run
 
 # Image name to use in all Docker commands
-IMAGE_NAME=nodejs-app-example-3
+IMAGE_NAME=nodejs-app-example-3:v1.1
 
 # Container name to use in Docker commands
 CONTAINER_NAME=nodejs-container-example-3

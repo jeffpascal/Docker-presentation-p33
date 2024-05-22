@@ -3,10 +3,10 @@
 all: run
 
 # Image name to use in all Docker commands
-IMAGE_NAME=nodejs-app-example-3
+IMAGE_NAME=nodejs-app-example-4
 
 # Container name to use in Docker commands
-CONTAINER_NAME=nodejs-container-example-3
+CONTAINER_NAME=nodejs-container-example-4
 
 # Build the Docker image
 .PHONY: build
@@ -18,7 +18,7 @@ build:
 .PHONY: run
 run: build
 	@echo "Running Docker container..."
-	docker run -d --name $(CONTAINER_NAME) -p 3000:3000 $(IMAGE_NAME)
+	docker run -d --name $(CONTAINER_NAME) -v test:/testdata -p 3000:3000 $(IMAGE_NAME)
 
 # Stop the Docker container
 .PHONY: stop
